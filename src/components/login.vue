@@ -10,7 +10,7 @@
                 </el-form-item>
                 <el-form-item label="验证码" prop="captcha" >
                         <el-input type="text" v-model="ruleForm.captcha" class="captcha"  placeholder="请输入验证码"></el-input>
-                        
+
                         <p style="height:40px;lineHeight:40px;marginTop:10px;display:flex"><img src="" class="capchaImg" @click="captchaImg"><span style="color:rgb(81,156,234);text-decoration:underline;margin-left:20px;cursor:pointer" @click="captchaImg">看不清?</span><router-link to="/home/register"><span style="margin-left:20px;color:rgb(81,156,234);text-decoration:underline;cursor:pointer">去注册页</span></router-link></p>
                 </el-form-item>
                 <el-form-item style="textAlign:center">
@@ -61,7 +61,7 @@
             this.getCaptcha()
         },
         mounted() {
-          
+
         },
         methods: {
             // 登录
@@ -78,7 +78,7 @@
                     this.$store.state.btnsShow = false
                     this.$store.state.userShow = true
                     this.$router.push('/home/match')
-                    // 
+                    //
                 }).catch(error => {
                     console.log(error.response)
                     if (error.response.data.msg) {
@@ -124,7 +124,7 @@
             // z-index: 10
         }
     }
-    
+
     // .login {
     //     width: 100%;
     //     // height: 100%;
